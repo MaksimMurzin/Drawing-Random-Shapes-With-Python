@@ -22,22 +22,23 @@ def change_color():
 
 
 # ==============================random walk ====================================
-#
-# for _ in range(50):
-#     change_color()
-#     timmy.forward(random.randint(10,50))
-#     timmy.right(random.choice([90, 180, 270, 360]))
-#
-#
-#
+timmy.width(3)
+
+for _ in range(50):
+    change_color()
+    timmy.forward(random.randint(10,50))
+    timmy.setheading(random.choice([0, 90, 180, 270]))
+
+
+
 
 # ==============================Draw a dick
-timmy.circle(20)
-timmy.forward(100)
-timmy.circle(-20,180)
-timmy.forward(100)
-timmy.circle(20)
-
-
-screen = Screen()
-screen.exitonclick()
+# timmy.circle(20)
+# timmy.forward(100)
+# timmy.circle(-20,180)
+# timmy.forward(100)
+# timmy.circle(20)
+#
+#
+# screen = Screen()
+# screen.exitonclick()
