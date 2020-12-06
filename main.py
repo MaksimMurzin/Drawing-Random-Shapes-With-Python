@@ -2,7 +2,8 @@ from turtle import Turtle, Screen
 import random
 
 timmy = Turtle()
-#
+
+
 def change_color():
     R = random.random()
     B = random.random()
@@ -22,17 +23,16 @@ def change_color():
 
 
 # ==============================random walk ====================================
-timmy.width(3)
+# timmy.width(5)
+#
+# for _ in range(200):
+#     change_color()
+#     timmy.forward(random.randint(10,50))
+#     timmy.setheading(random.choice([0, 90, 180, 270]))
+#
+#
 
-for _ in range(50):
-    change_color()
-    timmy.forward(random.randint(10,50))
-    timmy.setheading(random.choice([0, 90, 180, 270]))
-
-
-
-
-# ==============================Draw a dick
+# ==============================Draw a dick ===============================
 # timmy.circle(20)
 # timmy.forward(100)
 # timmy.circle(-20,180)
@@ -40,5 +40,21 @@ for _ in range(50):
 # timmy.circle(20)
 #
 #
-# screen = Screen()
-# screen.exitonclick()
+
+# =========== make a Spirograph ======================
+
+def draw_spirograph(number_of_circles):
+    timmy.speed(10)
+    change_color()
+    timmy.circle(50)
+    timmy.setheading(timmy.heading() + 360 / number_of_circles)
+
+
+for _ in range(20):
+    draw_spirograph(20)
+
+
+
+screen = Screen()
+screen.exitonclick()
+
